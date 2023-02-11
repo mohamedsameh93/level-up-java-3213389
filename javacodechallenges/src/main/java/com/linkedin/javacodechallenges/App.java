@@ -1,13 +1,13 @@
 package com.linkedin.javacodechallenges;
 
 import java.time.LocalDate;
-import java.time.Period;
+
 import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 
 public class App {
     public static LocalDate calculateHundredDaysFromNow(LocalDate today) {
-        Period hundredDays = Period.ofDays(100);
-        return today.plus(hundredDays);
+        return today.plus(100, ChronoUnit.DAYS);
     }
 
     public static void main(String[] args) {
